@@ -75,5 +75,3 @@ gem 'kaminari-i18n', '~> 0.5.0'
 gem 'redis', '~> 4'
 gem 'sidekiq', '~> 6'
 
-gem 'thinking-sphinx', '~> 5'
-
