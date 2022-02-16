@@ -25,21 +25,6 @@ module Woodman
     #Default time-zona from app
     config.time_zone = 'Almaty'
 
-    #config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 90.minutes }
-    config.cache_store = :redis_cache_store, {
-      url:                'redis://localhost:6379/0/cache',
-      connect_timeout:    30,  # Defaults to 20 seconds
-      read_timeout:       0.2, # Defaults to 1 second
-      write_timeout:      0.2, # Defaults to 1 second
-      reconnect_attempts: 1,   # Defaults to 0
-
-      error_handler: -> (method:, returning:, exception:) {
-        # Report errors to Sentry as warnings
-        Raven.capture_exception exception, level: 'warning',
-          tags: { method: method, returning: returning }
-      }
-    }
-
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -49,6 +34,5 @@ module Woodman
     # config.eager_load_paths << Rails.root.join("extras")
 
     # integration active job & sidekiq
-    config.active_job.queue_adapter = :sidekiq
   end
 end

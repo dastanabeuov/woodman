@@ -12,8 +12,6 @@ require 'capistrano/rails/migrations'
 require 'thinking_sphinx/capistrano'
 # require 'capistrano3/unicorn'
 require 'capistrano/passenger'
-# require sidekiq
-require 'capistrano/sidekiq'
 
 # Load the SCM plugin appropriate to your project:
 #

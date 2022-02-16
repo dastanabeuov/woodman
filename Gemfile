@@ -49,7 +49,6 @@ group :development do
   gem 'capistrano-rails', require: false
   gem 'capistrano-rvm', require: false
   gem 'capistrano-passenger', require: false
-  gem 'capistrano-sidekiq', require: false
   gem 'capistrano3-unicorn', require: false
 end
 
@@ -71,7 +70,4 @@ gem 'solidus_paypal_commerce_platform'
 gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n', '~> 7'
 gem 'kaminari-i18n', '~> 0.5.0'
-
-gem 'redis', '~> 4'
-gem 'sidekiq', '~> 6'
 
