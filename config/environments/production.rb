@@ -4,10 +4,10 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.smtp_settings = {
     user_name: ENV.fetch('SENDGRID_USERNAME'),
-    password: ENV.fetch('SENDGRID_PASSWORD'),
-    domain: ENV.fetch('SENDGRID_DOMAIN'),
-    address: ENV.fetch('SENDGRID_SMTP'),
-    port: ENV.fetch('SENDGRID_PORT'),
+    password:  ENV.fetch('SENDGRID_PASSWORD'),
+    domain:    ENV.fetch('SENDGRID_DOMAIN'),
+    address:   ENV.fetch('SENDGRID_SMTP'),
+    port:      ENV.fetch('SENDGRID_PORT'),
     authentication: :plain,
     enable_starttls_auto: true,
   }
