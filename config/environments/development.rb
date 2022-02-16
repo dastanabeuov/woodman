@@ -3,11 +3,11 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.smtp_settings = {
-    user_name: ENV.fetch('SENDGRID_USERNAME'),
-    password: ENV.fetch('SENDGRID_PASSWORD'),
-    domain: ENV.fetch('SENDGRID_DOMAIN'),
-    address: ENV.fetch('SENDGRID_SMTP'),
-    port: ENV.fetch('SENDGRID_PORT'),
+    user_name: 'classifier.kazniisa@gmail.com',
+    password:  'CLassifier@123',
+    domain:    'gmail.com',
+    address:   'smtp.gmail.com',
+    port:      '587',
     authentication: :plain,
     enable_starttls_auto: true,
   }
