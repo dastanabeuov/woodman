@@ -16,5 +16,5 @@ set :ssh_options, {
   keys: %w[/Users/adk/.ssh/id_rsa],
   forward_agent: true,
   auth_methods: %w[publickey password],
-  port: 7535
+  port: 2222
 }
