@@ -3,21 +3,14 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.smtp_settings = {
-    user_name: ENV('SENDGRID_USERNAME'),
-    password:  ENV('SENDGRID_PASSWORD'),
-    domain:    ENV('SENDGRID_DOMAIN'),
-    address:   ENV('SENDGRID_SMTP'),
-    port:      ENV('SENDGRID_PORT'),
+    user_name: ENV['SENDGRID_USERNAME'],
+    password:  ENV['SENDGRID_PASSWORD'],
+    domain:    ENV['SENDGRID_DOMAIN'],
+    address:   ENV['SENDGRID_SMTP'],
+    port:      ENV['SENDGRID_PORT'],
     authentication: :plain,
     enable_starttls_auto: true,
   }
-
-echo 'export WOODMAN_DATABASE_PASSWORD="web.dev.adk@gmail.com"' >> ~/.bashrc
-echo 'export SENDGRID_USERNAME="web.dev.adk@gmail.com"' >> ~/.bashrc
-echo 'export SENDGRID_PASSWORD="ADK@123123"' >> ~/.bashrc
-echo 'export SENDGRID_DOMAIN="gmail.com"' >> ~/.bashrc
-echo 'export SENDGRID_SMTP="smtp.gmail.com"' >> ~/.bashrc
-echo 'export SENDGRID_PORT="587"' >> ~/.bashrc
 
   # Code is not reloaded between requests.
   config.cache_classes = true
