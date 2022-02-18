@@ -2,15 +2,17 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.perform_caching = false
+  config.action_mailer.default_url_options = { host: 'woodman.kz' }
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name: ENV['SENDGRID_USERNAME'],
-    password:  ENV['SENDGRID_PASSWORD'],
-    domain:    ENV['SENDGRID_DOMAIN'],
-    address:   ENV['SENDGRID_SMTP'],
-    port:      ENV['SENDGRID_PORT'],
-    authentication: :plain,
-    enable_starttls_auto: true,
-  }
+    user_name:     ENV['GMAIL_USERNAME'],
+    password:      ENV['GMAIL_PASSWORD'],
+    address:            'smtp.gmail.com',
+    port:                            587,
+    authentication:              'plain',
+    enable_starttls_auto:            true
+  }  
 
   # Code is not reloaded between requests.
   config.cache_classes = false
