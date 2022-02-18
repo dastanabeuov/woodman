@@ -10,7 +10,7 @@ set :repo_url, 'git@github.com:dastanabeuov/woodman.git'
 #set :use_sudo, true
 set :deploy_to, '/home/deployer/woodman'
 set :deploy_user, 'deployer'
-
+set :rvm_ruby_version, 'ruby-2.5.8'
 # Default value for :linked_files is []
 append :linked_files, 'config/database.yml', 'config/master.key'
 
