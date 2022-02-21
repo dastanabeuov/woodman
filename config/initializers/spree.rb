@@ -7,7 +7,7 @@ Spree.load_defaults '3.1.5'
 Spree.config do |config|
   # Core:
   # Default currency for new sites
-  config.currency = "USD"
+  config.currency = "KZT"
 
   # from address for transactional emails
   config.mails_from = "store@woodman.kz"
