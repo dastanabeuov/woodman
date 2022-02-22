@@ -71,3 +71,5 @@ gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n', '~> 7'
 gem 'kaminari-i18n', '~> 0.5.0'
 gem 'aws-sdk-s3', require: false
+gem 'solidus_auth_devise'
+gem 'solidus_paypal_commerce_platform'
