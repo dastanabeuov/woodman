@@ -22,7 +22,7 @@ Spree.config do |config|
 
   # Configure adapter for attachments on products and taxons (use ActiveStorageAttachment or PaperclipAttachment)
   #config.image_attachment_module = 'Spree::Image::ActiveStorageAttachment'
-  config.taxon_attachment_module = 'Spree::Taxon::ActiveStorageAttachment'
+  #config.taxon_attachment_module = 'Spree::Taxon::ActiveStorageAttachment'
 
   # Defaults
   # Permission Sets:
