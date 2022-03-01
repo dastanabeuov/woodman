@@ -34,5 +34,6 @@ module Woodman
     # config.eager_load_paths << Rails.root.join("extras")
 
     # integration active job & sidekiq
+    config.active_job.queue_adapter = :sidekiq
   end
 end
